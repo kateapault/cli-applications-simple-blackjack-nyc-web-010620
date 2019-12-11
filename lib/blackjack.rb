@@ -35,6 +35,7 @@ def hit?(card_total)
   prompt_user
   action = get_user_input
   unless action == 'h' || action == 's'
+    invalid_command
     prompt_user
     action = get_user_input
   end
