@@ -37,12 +37,12 @@ def hit?(card_total)
   puts action
   if action == 'h'
     new_card = deal_card
+    return card_total + new_card
   elsif action == 's'
+    return card_total
   else
     invalid_command
   end
-  card_total += new_card
-  card_total
 end
 
 def invalid_command
