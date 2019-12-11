@@ -38,7 +38,6 @@ def hit?(card_total)
   if action == 'h'
     new_card = deal_card
   elsif action == 's'
-    pass
   else
     invalid_command
   end
