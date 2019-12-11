@@ -19,7 +19,7 @@ def get_user_input
   gets.chomp
 end
 
-def end_game_bust(card_total)
+def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
@@ -51,10 +51,6 @@ def invalid_command
   puts "Please enter a valid command"
 end
 
-def end_game_win
-  puts "21! You win!"
-end
-
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
@@ -62,12 +58,11 @@ end
 def runner
   welcome
   card_total = initial_round
-  unless card_total == 21
-    unless card_total > 21
-      new_total = hit?(card_total)
-      card_total = new_total
-      display_card_total(card_total)
-    end
-    end_game_bust(card_total)
+  unless card_total > 21
+    new_total = hit?(card_total)
+    card_total = new_total
+    display_card_total(card_total)
+  end
+  end_game(card_total)
 end
     
