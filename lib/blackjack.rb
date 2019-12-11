@@ -36,12 +36,14 @@ def hit?
   action = get_user_input
   if action == 'h'
     new_card = deal_card
+  else if action != 's'
+    invalid_command
   end
   new_card
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
