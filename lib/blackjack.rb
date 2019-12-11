@@ -36,12 +36,14 @@ def hit?(card_total)
   action = get_user_input
   puts action
   unless action == 'h' || action == 's'
-    if action == 'h'
-      new_card = deal_card
-      return card_total + new_card
-    elsif action == 's'
-      return card_total
-    end
+    prompt_user
+    action = get_user_input
+  end
+  if action == 'h'
+    new_card = deal_card
+    return card_total + new_card
+  elsif action == 's'
+    return card_total
   end
 end
 
