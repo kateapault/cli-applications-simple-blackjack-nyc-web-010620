@@ -36,8 +36,8 @@ def hit?
   action = get_user_input
   if action == 'h'
     new_card = deal_card
-#  else if action != 's'
-#    invalid_command
+  elsif action != 's'
+    invalid_command
   end
   new_card
 end
