@@ -34,6 +34,7 @@ end
 def hit?(card_total)
   prompt_user
   action = get_user_input
+  puts action
   if action == 'h'
     new_card = deal_card
   elsif action == 's'
